@@ -6,6 +6,7 @@ const {PASS_SUFFIX, HTTP_HOST, HTTP_UPLOAD} = require('../../config');
 const catalog = require('./catalog');
 const banner = require('./banner');
 const article = require('./article');
+const demo = require('./demoCtrl');
 let router = new Router();
 
 router.get('/login', async ctx => {
@@ -137,5 +138,6 @@ router.all('*', async (ctx, next) => {
 router.use('/catalog', catalog);
 router.use('/banner', banner);
 router.use('/article', article);
+router.use('/demoList', demo);
 
 module.exports = router.routes();

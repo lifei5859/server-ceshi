@@ -12,6 +12,7 @@ module.exports = function (tableConf, list, title, page_type) {
         'banner': 'banner管理',
         'catalog': '类目管理',
         'article': '文章管理',
+        'demoList': 'demo管理',
     };
     router.get('/', async ctx => {
         let data = await ctx.db.query(`SELECT * FROM ${list}`);
@@ -73,6 +74,7 @@ module.exports = function (tableConf, list, title, page_type) {
         let {id} = ctx.params;
         let data = await ctx.db.query(`SELECT * FROM ${list} WHERE ID=?`, [Number(id)]);
         ctx.assert(data.length, 500, common.resJson(0, '数据错误'));
+        console.log(data);
         ctx.body = common.resJson(1, data[0]);
     });
 
