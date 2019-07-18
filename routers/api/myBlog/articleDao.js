@@ -6,14 +6,7 @@ const fs = require('fs');
 // const moment = require('moment');
 function serverRouter (tableConf, list, title, page_type) {
     let router = new Router();
-    console.log('ok');
 
-    router.get('/aaa', async (ctx) => {
-        console.log('/aaa')
-        ctx.body = {
-            a: 1111
-        }
-    })
         router.get('/queryArt', async (ctx) => {
             let {page, pageSize} = ctx.query;
             // ctx.assert( page != undefined || pageSize != undefined, 404, common.resJson(0, '参数错误'));

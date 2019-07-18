@@ -1,10 +1,25 @@
 
+
+.main-wrapper {
+    min-width: 350px;
+}
 .main-title {
     margin-left: 30px;
     margin-right: 50px;
     background-color: antiquewhite;
+    min-width: 133px;
 }
 .my-row {
     margin: 0;
     padding: 0 30px;
 }
+.my-nav-btn {
+    height: 100%;
+    padding-top: 10px;
+    text-align: center;
+    margin-left: 40px;
+}
+.my-btn-menu {
+    /*display: inline-block;*/
+}
+

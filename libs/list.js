@@ -19,8 +19,11 @@ module.exports = function (tableConf, list, title, page_type) {
         tableConf.forEach(async item => {
             console.log(item)
             if (item.type === 'select') {
-                item.vals = await ctx.db.query(item.from);
-                console.log(item)
+                if (item.list) {
+                    item.vals = item.list;
+                }else {
+                    item.vals = await ctx.db.query(item.from);
+                }
             }
         });
         await ctx.render('admin/index', {

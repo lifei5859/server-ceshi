@@ -13,7 +13,8 @@ const tableConf = [
     {title: '主运行平台', name: 'main_platform', type: 'text'},
     {title: '是否响应式', name: 'is_self_adaption', type: 'radio'},
     {title: '使用技术', name: 'admin_technology', type: 'text'},
-    {title: 'github', name: 'git_link', type: 'text'}
+    {title: 'github', name: 'git_link', type: 'text'},
+    {title: '类型', name:'type', type:'select', list:[{ID:'dome', title:'dome'}, {ID: 'project', title: 'project'}, {ID: 'module', title:'module'}]}
 ];
 const page_type = 'demoList';
 // const page_types={
