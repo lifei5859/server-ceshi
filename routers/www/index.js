@@ -3,6 +3,7 @@ const path = require('path');
 const fs = require('fs');
 const { HTTP_STATIC } = require('../../config')
 const home = require('./home');
+const jsDemo = require('./small_demo/javaScript')
 
 let router = new Router();
 
@@ -24,6 +25,7 @@ let router = new Router();
 //     });
 // });
 router.use('', home);
+router.use('/smallDemo/js', jsDemo);
 // router.use('/about', about);
 // router.use('/read', read);
 

@@ -15,6 +15,11 @@ module.exports = function (pageConf, list, title, page) {
     };
     router.get('/', async ctx => {
         let data = await ctx.db.query(`SELECT * FROM ${list}`);
+
+        data.forEach((item, index) => {
+            item.admin_technology = item.admin_technology.split(',')
+           console.log(item.admin_technology);
+        });
         // tableConf.forEach(async item => {
         //     console.log(item)
         //     if (item.type === 'select') {
@@ -22,6 +27,7 @@ module.exports = function (pageConf, list, title, page) {
         //         console.log(item)
         //     }
         // });
+        console.log(data)
         await ctx.render('index', {
             data,
             pageConf,

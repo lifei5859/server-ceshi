@@ -7,6 +7,7 @@
     <title><%=title%></title>
     <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index/home.css">
 </head>
 <body class="main-wrapper">
     <nav class="navbar navbar-default container-fluid">
@@ -75,17 +76,41 @@
                   </div>
                   <div class="panel-body">
                       <div class="row">
-                          <%data.forEach((item, index) => {%>
-                              <div class="col-md-4">
-                                  <div class="panel panel-default ">
-                                      <div class="panel-heading">
-                                          <a href="<%=item.demo_link%>"><h3 class="panel-title"><%=item.demo_title%></h3></a>
-                                      </div>
-                                      <div class="panel-body">
-                                          Panel content
+                          <%data.forEach((ele, index) => {%>
+                                <%if (item.name === ele.type){%>
+                                  <div class="col-md-4">
+                                      <div class="panel panel-default">
+                                          <div class="panel-heading">
+                                              <a href="<%=ele.demo_link%>"><h3 class="panel-title"><%=ele.demo_title%></h3></a>
+                                          </div>
+                                          <div class="panel-body">
+                                              <%=ele.demo_describe%>
+                                          </div>
+
+
+                                              <div class="container-fluid">
+                                                  <!--<p class="row function">-->
+                                                      <!--<span class="col-md-6 col-xs-6 col-md-6 col-lg-6">主运行平台:&nbsp;&nbsp; <%=ele.main_platform%></span>-->
+                                                      <!--<span class="col-md-6 col-xs-6 col-md-6 col-lg-6">是否响应式:&nbsp;&nbsp; <%=ele.is_self_adaption%></span>-->
+                                                  <!--</p>-->
+
+                                                  <p class="text-right">
+                                                  <span class="label label-primary"><%=ele.main_platform%></span>
+                                                  <%if (ele.is_self_adaption == '是'){%>
+                                                    <span class="label label-primary">响应式</span>
+                                                  <%}%>
+                                                      <a href="<%=ele.git_link%>"><img class="git-icon" src="./img/git.jpg" alt="">gitHub</a>
+                                                  </p>
+                                              </div>
+                                          <div class="technology">
+                                              <span class="technology-title">技术应用:</span>
+                                              <%ele.admin_technology.forEach(technologyItem => {%>
+                                              <span class="label label-success"><%=technologyItem%></span>
+                                              <%})%>
+                                          </div>
                                       </div>
                                   </div>
-                              </div>
+                              <%}%>
                           <%})%>
                       </div>
                   </div>

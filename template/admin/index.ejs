@@ -7,12 +7,7 @@
     <title><%=title%></title>
     <link rel="stylesheet" href="/layui-v2.4.5/layui/css/layui.css">
     <style>
-      .min{
-        min-width: 1120px;
-      }
-      /* .min .pading-20{
-        padding: 9px 30px;
-      } */
+
     </style>
 </head>
 <body>
@@ -27,7 +22,7 @@
 
     <button id="add_btn" type="button" class="layui-btn layui-btn-radius"><i class="layui-icon">&#xe608;</i> 添加</button>
 
-    <table class="layui-table min">
+    <table class="layui-table">
         <colgroup>
           <col width="150">
           <col width="200">
@@ -53,7 +48,7 @@
               <td><%=item.img_src%></td>
               <td><%=item.src%></td>
               <td><%=item.serial_num%></td> -->
-              <td style="text-align: center">
+              <td style="text-align: center; min-width: 145px">
                 <button data-id="<%=item.id%>" style="display: inline-block" class="layui-btn layui-btn-radius update">修改</button>
                 <button data-id="<%=item.id%>" style="display: inline-block" class="layui-btn layui-btn-radius layui-btn-danger remove">删除</button>
               </td>
@@ -68,178 +63,191 @@
     <script src="/js/moment.js"></script>
 <script>
 
+    $(document).ready(() => {
+        let addNum = 0;
+        let updateNum = 0;
+        layui.use('element', function(){
+            var element = layui.element;
+        });
 
-      // console.log(JSON.stringify(['<%tableConf.forEach%>']))
-      $(document).ready(() => {
         let tempForm =  `<form class="layui-form" action="" id="form" enctype="multipart/form-data">
-                        <%tableConf.forEach((item) => {
-                          if (!item.isWrite){%>
-                            <div class="layui-form-item">
-                              <label class="layui-form-label"><%=item.title%></label>
-                             <%if(item.type == "textarea"){%>
+                    <%tableConf.forEach((item) => {
+        if (!item.isWrite){%>
+                        <div class="layui-form-item">
+                          <label class="layui-form-label"><%=item.title%></label>
+                         <%if(item.type == "textarea"){%>
+                          <div class="layui-input-block">
+                            <textarea name="<%=item.name%>" lay-verify="required" autocomplete="off" class="layui-textarea" ></textarea>
+                          </div>
+                          <%}else if(item.type == 'select'){%>
                               <div class="layui-input-block">
-                                <textarea name="<%=item.name%>" lay-verify="required" autocomplete="off" class="layui-textarea" ></textarea>
+                                <select name="<%=item.name%>" lay-verify="required">
+                                  <option value=""></option>
+                                  <%item.vals.forEach((val)=>{%>
+                                    <option value="<%=val.ID%>"><%=val.title%></option>
+                                    <%})%>
+                                </select>
                               </div>
-                              <%}else if(item.type == 'select'){%>
-                                  <div class="layui-input-block">
-                                    <select name="<%=item.name%>" lay-verify="required">
-                                      <option value=""></option>
-                                      <%item.vals.forEach((val)=>{%>
-                                        <option value="<%=val.ID%>"><%=val.title%></option>
-                                        <%})%>
-                                    </select>
-                                  </div>
-                                <%} else if (item.type == "radio") {%>
-                                       <div class="layui-input-block">
-                                          <input type="<%=item.type%>" name="<%=item.name%>" value="是" title="是">
-                                          <input type="<%=item.type%>" name="<%=item.name%>" value="否" title="否" checked>
-                                        </div>
-                                <%} else{%>
-                              <div class="layui-input-block">
-                                  <input type="<%=item.type%>" name="<%=item.name%>" lay-verify="required" autocomplete="off" class="layui-input">
-                              </div>
-                              <%}%>
-                            </div>
-                        <%}else{%>
-                          <div class="layui-form-item"  style="display:none" >
-                              <label class="layui-form-label"><%=item.title%></label>
-                              <div class="layui-input-block">
-                                  <%if(item.type=='date'){%>
-                                    <input type="<%=item.type%>" value="${moment().format('YYYY-MM-DD')}"  name="<%=item.name%>" lay-verify="required" autocomplete="off" class="layui-input">
-                                    <%}else{%>
-                                      <input type="<%=item.type%>" value="0"  name="<%=item.name%>" lay-verify="required" autocomplete="off" class="layui-input">
-                                      <%}%>
-                              </div>
-                            </div>
-                        <%}
-                      })%>
-                      </form>`
+                            <%} else if (item.type == "radio") {%>
+                                   <div class="layui-input-block">
+                                      <input type="<%=item.type%>" name="<%=item.name%>" value="是" title="是">
+                                      <input type="<%=item.type%>" name="<%=item.name%>" value="否" title="否" checked>
+                                    </div>
+                            <%} else{%>
+                          <div class="layui-input-block">
+                              <input type="<%=item.type%>" name="<%=item.name%>" lay-verify="required" autocomplete="off" class="layui-input">
+                          </div>
+                          <%}%>
+                        </div>
+                    <%}else{%>
+                      <div class="layui-form-item"  style="display:none" >
+                          <label class="layui-form-label"><%=item.title%></label>
+                          <div class="layui-input-block">
+                              <%if(item.type=='date'){%>
+                                <input type="<%=item.type%>" value="${moment().format('YYYY-MM-DD')}"  name="<%=item.name%>" lay-verify="required" autocomplete="off" class="layui-input">
+                                <%}else{%>
+                                  <input type="<%=item.type%>" value="0"  name="<%=item.name%>" lay-verify="required" autocomplete="off" class="layui-input">
+                                  <%}%>
+                          </div>
+                        </div>
+                    <%}
+        })%>
+                  </form>`
         $('#add_btn').on('click', () => {
+            // $('#layerOpen').css({display: 'block'});
 
-          layer.open({
-            content: tempForm,
-            title: 'banner管理',
-            area: ['60%'],
-            yes: async function () {
-              let form = new FormData($('#form')[0]);
-              let data = await fetch('/admin/<%=page_type%>/list', {
-                method: 'post',
-                body: form
-              })
-              let res = await data.json();
-              layer.msg(res.data);
-              setTimeout(() => {
-                window.location.reload();
-              }, 800);
-            }
-          });
-            layui.use('element', function(){
-                var element = layui.element;
+            layer.open({
+                content: tempForm,
+                title: 'banner管理',
+                area: ['60%'],
+                yes: async function () {
+                    let form = new FormData($('#form')[0]);
+                    let data = await fetch('/admin/<%=page_type%>/list', {
+                        method: 'post',
+                        body: form
+                    })
+                    let res = await data.json();
+                    layer.msg(res.data);
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 800);
+                },
+                cancel (){
+                    window.location.reload();
+                }
             });
+                layui.use('form', function(){
+                    var form = layui.form;
+                });
+        });
+        $('.remove').on('click', async (e) => {
+            let id = e.target.dataset.id;
+            layer.msg('你确定要删除吗？', {
+                time: 0,
+                icon: 7,
+                btn: ['确定', '取消'],
+                yes: async function(index){
+                    layer.close(index);
+                    let data = await fetch(`/admin/<%=page_type%>/delete/${id}`, {
+                        method: 'get',
+                    })
+                    let res = await data.json();
+                    if (!res.status) {
+                        layer.msg(res.data, {icon: 2});
+                        return;
+                    }
+                    layer.msg(res.data, {icon: 1});
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 300)
+                }
+
+            });
+        });
+        $('.update').on('click', async (e) => {
+            let id = e.target.dataset.id;
+            let data = await fetch(`/admin/<%=page_type%>/getList/${id}`, {
+                method: 'get'
+            });
+            let res = await data.json();
+            if (!res.status) {
+                layer.msg(res.data);
+                return;
+            }
+            let temp = res.data
+            console.log(temp);
+            content = `<form class="layui-form" action="" id="form" enctype="multipart/form-data">
+                    <%tableConf.forEach((item) => {
+            if(!item.isWrite){%>
+                        <div class="layui-form-item">
+                          <label class="layui-form-label"><%=item.title%></label>
+                          <div class="layui-input-block">
+                            <%if(item.type == "textarea"){%>
+                            <div class="layui-input-block">
+                              <textarea name="<%=item.name%>"  lay-verify="required" autocomplete="off" class="layui-textarea" >${temp['<%=item.name%>']}</textarea>
+                            </div>
+                          <%}else if(item.type == 'select'){%>
+                              <div class="layui-input-block">
+                                <select name="<%=item.name%>" lay-verify="required">
+                                  <option value=""></option>
+                                  <%item.vals.forEach((val)=>{%>
+                                    <option value="<%=val.ID%>"><%=val.title%></option>
+                                    <%})%>
+                                </select>
+                              </div>
+                            <%} else if (item.type == "radio") {%>
+                                   <div class="layui-input-block">
+                                      <input type="<%=item.type%>" name="<%=item.name%>" value="是" title="是">
+                                      <input type="<%=item.type%>" name="<%=item.name%>" value="否" title="否" checked>
+                                    </div>
+                            <%}else{%>
+                            <div class="layui-input-block">
+                              <input type="<%=item.type%>" value=${temp['<%=item.name%>']} name="<%=item.name%>" lay-verify="required" autocomplete="off" class="layui-input">
+                            </div>
+                          <%}%>
+                          </div>
+                        </div>
+                    <%}else{%>
+                      <div class="layui-form-item" style="display:none" >
+                          <label class="layui-form-label"><%=item.title%></label>
+                          <div class="layui-input-block">
+                              <input type="<%=item.type%>" value="0" disabled name="<%=item.name%>" lay-verify="required" autocomplete="off" class="layui-input">
+                          </div>
+                        </div>
+                        <%}
+            })%>
+                  </form>`
+            layer.open({
+                content,
+                title: 'banner管理',
+                area: ['60%'],
+                yes: async function () {
+                    let form = new FormData($('#form')[0]);
+                    let data = await fetch(`/admin/<%=page_type%>/update/${id}`, {
+                        method: 'post',
+                        body: form
+                    });
+                    let res = await data.json();
+                    if (!res.status) {
+                        layer.msg(res.data, {icon: 2});
+                        return;
+                    }
+                    layer.msg(res.data);
+                    setTimeout(() => {
+                        window.location.reload();
+                    }, 300);
+                },
+                cancel (){
+                    window.location.reload();
+                }
+            })
+            console.log(id);
             layui.use('form', function(){
                 var form = layui.form;
             });
         });
-        $('.remove').on('click', async (e) => {
-          let id = e.target.dataset.id;
-          layer.msg('你确定要删除吗？', {
-            time: 0,
-            icon: 7,
-            btn: ['确定', '取消'],
-            yes: async function(index){
-              layer.close(index);
-              let data = await fetch(`/admin/<%=page_type%>/delete/${id}`, {
-                method: 'get',
-              })
-              let res = await data.json();
-              if (!res.status) {
-                layer.msg(res.data, {icon: 2});
-                return;
-              }
-              layer.msg(res.data, {icon: 1});
-              setTimeout(() => {
-                window.location.reload();
-              }, 300)
-            }
-          });
-        });
-        $('.update').on('click', async (e) => {
-          let id = e.target.dataset.id;
-          let data = await fetch(`/admin/<%=page_type%>/getList/${id}`, {
-            method: 'get'
-          });
-          let res = await data.json();
-          if (!res.status) {
-            layer.msg(res.data);
-            return;
-          }
-          let temp = res.data
-            console.log(temp);
-          content = `<form class="layui-form" action="" id="form" enctype="multipart/form-data">
-                        <%tableConf.forEach((item) => {
-                          if(!item.isWrite){%>
-                            <div class="layui-form-item">
-                              <label class="layui-form-label"><%=item.title%></label>
-                              <div class="layui-input-block">
-                                <%if(item.type == "textarea"){%>
-                                <div class="layui-input-block">
-                                  <textarea name="<%=item.name%>"  lay-verify="required" autocomplete="off" class="layui-textarea" >${temp['<%=item.name%>']}</textarea>
-                                </div>
-                              <%}else if(item.type == 'select'){%>
-                                  <div class="layui-input-block">
-                                    <select name="<%=item.name%>" lay-verify="required">
-                                      <option value=""></option>
-                                      <%item.vals.forEach((val)=>{%>
-                                        <option value="<%=val.ID%>"><%=val.title%></option>
-                                        <%})%>
-                                    </select>
-                                  </div>
-                                <%} else if (item.type == "radio") {%>
-                                       <div class="layui-input-block">
-                                          <input type="<%=item.type%>" name="<%=item.name%>" value="是" title="是">
-                                          <input type="<%=item.type%>" name="<%=item.name%>" value="否" title="否" checked>
-                                        </div>
-                                <%}else{%>
-                                <div class="layui-input-block">
-                                  <input type="<%=item.type%>" value=${temp['<%=item.name%>']} name="<%=item.name%>" lay-verify="required" autocomplete="off" class="layui-input">
-                                </div>
-                              <%}%>
-                              </div>
-                            </div>
-                        <%}else{%>
-                          <div class="layui-form-item" style="display:none" >
-                              <label class="layui-form-label"><%=item.title%></label>
-                              <div class="layui-input-block">
-                                  <input type="<%=item.type%>" value="0" disabled name="<%=item.name%>" lay-verify="required" autocomplete="off" class="layui-input">
-                              </div>
-                            </div>
-                            <%}
-                          })%>
-                      </form>`
-          layer.open({
-            content,
-            title: 'banner管理',
-            area: ['60%'],
-            yes: async function () {
-              let form = new FormData($('#form')[0]);
-              let data = await fetch(`/admin/<%=page_type%>/update/${id}`, {
-                method: 'post',
-                body: form
-              });
-              let res = await data.json();
-              if (!res.status) {
-                layer.msg(res.data, {icon: 2});
-                return;
-              }
-              layer.msg(res.data);
-              setTimeout(() => {
-                window.location.reload();
-              }, 300);
-            }
-          })
-          console.log(id);
-        });
-      });
+    });
+
 </script>
 </body>
 </html>

@@ -5,10 +5,10 @@ module.exports = {
     DB_HOST: '127.0.0.1',
     DB_PORT: 3306,
     DB_USE: 'root',
-    DB_PASS: 'Lifei%*%*528',
+    DB_PASS: 'lifei5858',
     DB_NAME: 'server_demo',
     //http
-    HTTP_HOST: 'http://49.234.184.195',
+    HTTP_HOST: 'http://127.0.0.1',
     HTTP_PORT: 80,
     HTTP_STATIC: path.resolve(__dirname, './static'),
     HTTP_UPLOAD: path.resolve(__dirname, './static/upload'),

@@ -14,7 +14,7 @@ const tableConf = [
     {title: '是否响应式', name: 'is_self_adaption', type: 'radio'},
     {title: '使用技术', name: 'admin_technology', type: 'text'},
     {title: 'github', name: 'git_link', type: 'text'},
-    {title: '类型', name:'type', type:'select', list:[{ID:'dome', title:'dome'}, {ID: 'project', title: 'project'}, {ID: 'module', title:'module'}]}
+    {title: '类型', name:'type', type:'select', list:[{ID:'demo', title:'demo'}, {ID: 'project', title: 'project'}, {ID: 'module', title:'module'}]}
 ];
 const page_type = 'demoList';
 // const page_types={
