@@ -8,7 +8,7 @@ module.exports = {
     DB_PASS: 'Lifei%*%*528',
     DB_NAME: 'server_demo',
     //http
-    HTTP_HOST: 'http://www.fgdemoshow.cn',
+    HTTP_HOST: '49.234.184.195',
     HTTP_PORT: 80,
     HTTP_STATIC: path.resolve(__dirname, './static'),
     HTTP_UPLOAD: path.resolve(__dirname, './static/upload'),

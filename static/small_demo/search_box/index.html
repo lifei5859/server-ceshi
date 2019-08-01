@@ -11,14 +11,13 @@
             padding: 0;
         }
         .warper{
-
             border: 1px solid #666;
             width: 450px;
             margin: 100px auto 0;
         }
         ul {
             float: right;
-          }
+        }
         li{
             list-style: none;
             border: 2px solid orange;
@@ -71,10 +70,10 @@
             line-height: 45px;
         }
     </style>
-    </head>
+</head>
 
-    <body>
-        <div class="warper">
+<body>
+<div class="warper">
 
     <input type="text">
     <ul class='nav'>
@@ -88,143 +87,143 @@
     </div>
 </div>
 <script>
-        //兼容事件绑定
-        function addEvent(elem, type, handle) {
-            if (elem.addEventListener) {
-                elem.addEventListener(type, handle, false);
-            } else if (elem.attachEvent) {
-                elem.attachEvent('on' + type, function () {
-                    handle.call(elem);
-                })
-            } else {
-                elem['on' + type] = handle;
-            }
-        }
-        //防抖函数
-        function debounce(fun, time) {
-            var timer = null;
-            return function () {
-                var inp = this;
-                clearTimeout(timer);
-                timer = setTimeout(function () {
-                    fun.call(inp);
-                }, time)
-            }
-        }
-        //状态管理函数
-        function createStore(initValue) {
-            var fns = [];
-            var condition = initValue;
-            function getCondition() {
-                return condition;
-            }
-            function dispatch(action) {
-                condition[action.type] = action.value;
-                fns.forEach(function (item) {
-                    item();
-                })
-            }
-            function subScribe(fn) {
-                fns.push(fn);
-            }
-            return {
-                getCondition: getCondition,
-                dispatch: dispatch,
-                subScribe: subScribe
-            }
-        }
-        // 筛选搜索关键字方法
-        function filterText(vale, farr) {
-            lastArr = farr.filter(function (ele, index) {
-                if (ele.name.indexOf(vale) != -1) {
-                    return true
-                }
+    //兼容事件绑定
+    function addEvent(elem, type, handle) {
+        if (elem.addEventListener) {
+            elem.addEventListener(type, handle, false);
+        } else if (elem.attachEvent) {
+            elem.attachEvent('on' + type, function () {
+                handle.call(elem);
             })
-            return lastArr;
+        } else {
+            elem['on' + type] = handle;
         }
-        // 筛选性别方法
-        function filterSex(sex, arr) {
-            lastArr = arr.filter(function (ele, index) {
-                if (sex != 'all') {
-                    if (ele.sex == sex) {
-                        return true;
-                    }
-                } else {
+    }
+    //防抖函数
+    function debounce(fun, time) {
+        var timer = null;
+        return function () {
+            var inp = this;
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                fun.call(inp);
+            }, time)
+        }
+    }
+    //状态管理函数
+    function createStore(initValue) {
+        var fns = [];
+        var condition = initValue;
+        function getCondition() {
+            return condition;
+        }
+        function dispatch(action) {
+            condition[action.type] = action.value;
+            fns.forEach(function (item) {
+                item();
+            })
+        }
+        function subScribe(fn) {
+            fns.push(fn);
+        }
+        return {
+            getCondition: getCondition,
+            dispatch: dispatch,
+            subScribe: subScribe
+        }
+    }
+    // 筛选搜索关键字方法
+    function filterText(vale, farr) {
+        lastArr = farr.filter(function (ele, index) {
+            if (ele.name.indexOf(vale) != -1) {
+                return true
+            }
+        })
+        return lastArr;
+    }
+    // 筛选性别方法
+    function filterSex(sex, arr) {
+        lastArr = arr.filter(function (ele, index) {
+            if (sex != 'all') {
+                if (ele.sex == sex) {
                     return true;
                 }
-            })
-
-            return lastArr;
-        }
-        //将筛选方法写进一个对象，以备状态管理器调用
-        var obj = {
-            sex: filterSex,
-            value: filterText
-        }
-        //统一管理筛选方法
-        function filterAll(obj, arr) {
-            var lastArr = arr;
-            for (var prop in obj) {
-                lastArr = obj[prop](store.getCondition()[prop], lastArr);
+            } else {
+                return true;
             }
-            return lastArr;
+        })
+
+        return lastArr;
+    }
+    //将筛选方法写进一个对象，以备状态管理器调用
+    var obj = {
+        sex: filterSex,
+        value: filterText
+    }
+    //统一管理筛选方法
+    function filterAll(obj, arr) {
+        var lastArr = arr;
+        for (var prop in obj) {
+            lastArr = obj[prop](store.getCondition()[prop], lastArr);
         }
-        //渲染函数
-        function render(array) {
-            var str = '';
-            array.forEach(function (ele, index) {
-                str += "<p><img src=" + ele.src + "><span>" + ele.des + "</span> <span>" + ele.name + "</span></p>";
-                oDiv.innerHTML = str;
-            })
-        }
+        return lastArr;
+    }
+    //渲染函数
+    function render(array) {
+        var str = '';
+        array.forEach(function (ele, index) {
+            str += "<p><img src=" + ele.src + "><span>" + ele.des + "</span> <span>" + ele.name + "</span></p>";
+            oDiv.innerHTML = str;
+        })
+    }
 
-        // 模拟数据
-        var tel = [
-            { src: '/small_demo/search_box/1.jpg', name: '刘小美', sex: 'female', des: '沉鱼落雁' },
-            { src: '/small_demo/search_box/2.jpg', name: '刘狗蛋', sex: 'male', des: '能吃，能拉，能睡' },
-            { src: '/small_demo/search_box/3.jpg', name: '王美丽', sex: 'female', des: 'InternationalStyle' },
-            { src: '/small_demo/search_box/4.jpg', name: '赵的住', sex: 'male', des: '某地，抗坝子' },
-            { src: '/small_demo/search_box/5.jpg', name: '王郁闷', sex: 'male', des: '天生怀疑人生' },
-            { src: '/small_demo/search_box/6.jpg', name: '陆飞飞', sex: 'male', des: '成为海贼的男人' },
-            { src: '/small_demo/search_box/7.jpeg', name: '李冷脸', sex: 'female', des: '脸很冷，心很冷，冷！' },
-            { src: '/small_demo/search_box/8.jpg', name: '李逗笔', sex: 'male', des: '就爱，逗你玩' },
-            { src: '/small_demo/search_box/9.jpg', name: '李扎扎', sex: 'female', des: '传说中的人物' },
-            { src: '/small_demo/search_box/10.png', name: '陆猫奴', sex: 'female', des: '爱猫，胜过一切' },
-            { src: '/small_demo/search_box/11.jpg', name: '刘叔叔', sex: 'male', des: '未老，头先白' },
-            { src: '/small_demo/search_box/12.jpg', name: '赵不住', sex: 'female', des: '最爱，小动物' }
-        ]
+    // 模拟数据
+    var tel = [
+        { src: '/small_demo/search_box/1.jpg', name: '刘小美', sex: 'female', des: '沉鱼落雁' },
+        { src: '/small_demo/search_box/2.jpg', name: '刘狗蛋', sex: 'male', des: '能吃，能拉，能睡' },
+        { src: '/small_demo/search_box/3.jpg', name: '王美丽', sex: 'female', des: 'InternationalStyle' },
+        { src: '/small_demo/search_box/4.jpg', name: '赵的住', sex: 'male', des: '某地，抗坝子' },
+        { src: '/small_demo/search_box/5.jpg', name: '王郁闷', sex: 'male', des: '天生怀疑人生' },
+        { src: '/small_demo/search_box/6.jpg', name: '陆飞飞', sex: 'male', des: '成为海贼的男人' },
+        { src: '/small_demo/search_box/7.jpeg', name: '李冷脸', sex: 'female', des: '脸很冷，心很冷，冷！' },
+        { src: '/small_demo/search_box/8.jpg', name: '李逗笔', sex: 'male', des: '就爱，逗你玩' },
+        { src: '/small_demo/search_box/9.jpg', name: '李扎扎', sex: 'female', des: '传说中的人物' },
+        { src: '/small_demo/search_box/10.png', name: '陆猫奴', sex: 'female', des: '爱猫，胜过一切' },
+        { src: '/small_demo/search_box/11.jpg', name: '刘叔叔', sex: 'male', des: '未老，头先白' },
+        { src: '/small_demo/search_box/12.jpg', name: '赵不住', sex: 'female', des: '最爱，小动物' }
+    ]
 
-        var oIpu = document.getElementsByTagName('input')[0];
-        var oDiv = document.getElementsByTagName('div')[1];
-        var oUl = document.getElementsByTagName('ul')[0];
-        //初始数据
-        var store = createStore({ sex: 'all', value: '' });
-        // 初始渲染
-        render(tel);
-        //调用状态管理进行赛选后渲染
-        store.subScribe(function () {
-            render(filterAll(obj, tel));
-        });
+    var oIpu = document.getElementsByTagName('input')[0];
+    var oDiv = document.getElementsByTagName('div')[1];
+    var oUl = document.getElementsByTagName('ul')[0];
+    //初始数据
+    var store = createStore({ sex: 'all', value: '' });
+    // 初始渲染
+    render(tel);
+    //调用状态管理进行赛选后渲染
+    store.subScribe(function () {
+        render(filterAll(obj, tel));
+    });
 
-        //绑定input事件
-        addEvent(oIpu, 'input', debounce(function () {
-            store.dispatch({ type: 'value', value: this.value });
-        }, 800));
+    //绑定input事件
+    addEvent(oIpu, 'input', debounce(function () {
+        store.dispatch({ type: 'value', value: this.value });
+    }, 800));
 
-        //绑定点击事件用于筛选性别
-        addEvent(oUl, 'mousedown', function (e) {
-            var event = e || window.event;
-            var target = event.tarent || event.srcElement;
-            var dome = document.getElementsByClassName('down')[0];
-            if(target.tagName=='LI'){
+    //绑定点击事件用于筛选性别
+    addEvent(oUl, 'mousedown', function (e) {
+        var event = e || window.event;
+        var target = event.tarent || event.srcElement;
+        var dome = document.getElementsByClassName('down')[0];
+        if(target.tagName=='LI'){
             dome.className = '';
             target.className = 'down';
         }
-            store.dispatch({ type: 'sex', value: target.getAttribute('sex') });
+        store.dispatch({ type: 'sex', value: target.getAttribute('sex') });
 
-        });
+    });
 
 
-    </script>
+</script>
 </body>
 </html>

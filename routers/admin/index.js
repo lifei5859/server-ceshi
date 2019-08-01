@@ -35,7 +35,7 @@ router.post('/login', async ctx => {
     ctx.session['admin'] = user;
     ctx.body = common.resJson(1, '登录成功');
     // ctx.redirect('/admin');
-})
+});
 router.all('*', async (ctx, next) => {
     if (ctx.session['admin']) {
         await next();
