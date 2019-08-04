@@ -1,0 +1,708 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f897aef8-31c6-4333-9e82-375343cff2f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.svn/entries" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/format" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/00/009c50a10c3048409c9f12b0b9e8a48d9023e82c.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/02/02a263028625496740eea9a50141a4ad98d826a1.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/04/04fe5b26b7e2c980d12ad7157a4ce908c2a74f14.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/05/05eeb7a9c42a2cd3876417944143078ce514a8b9.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/0a/0aeacee2e0efb7aed37cf654070368c1f8bb4b27.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/0a/0afcb6c47cb53fa4a8467d7d7bf00ec464df2f8e.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/0b/0b88c01b477d4ca98eb99a665c0ab8738551aeec.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/0c/0c2a9443a5bd960ecc3868bbd3d9a62e690cdeb5.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/14/141ae180796db9800770dc9dbb8c9beda6f170e8.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/14/1487f355e0ae2a955a4ac91048ab2689895abb95.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/14/14fd59adc3cc3708330498bba5263ea92bda9e61.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/15/15368e90ed1ad56ee461959f3cca456febe94010.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/15/153c5f602881b04bed23d5c7d21a977563075ee2.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/15/15c60daa7e5833e5350fe758caa77fda148ad3d0.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/16/167ec7d708a91efaed506c96ea2e0c28f2e38211.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/17/170c2e16dd383e26d9d68406eb217dbf191ea14e.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/19/19d1c2be77b2da340ecb1db35034ce5bda284703.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/1a/1af45520e97328498b1a281b6955df5029fc9679.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/1b/1b4d65a2a248341140ef54e97252f217962a69f7.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/1d/1d7cf7a154582f3a8500da174b554a8f182de03d.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/1e/1ef1419f1ba2fd28e7de676ae5c388074646be53.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/21/211ced3758c054d807705decb2343b0022fa5191.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/23/23e2def2867215f92a1980c5a3659d8763c83772.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/26/2619f4e4f16854c3484c3872729d46171a564374.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/27/27e2b9a32cbd1026d9171545b1f6ad5051cddcef.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/28/28e9ec7a3882fec8c63dd731b06a9bbcc179aff7.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/29/29043ca9d16adf6574d4d7efde1af7a615689931.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/30/3099e94aac734a18ff9a89e7b7d447e289e6ffe4.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/32/32a9fa973626a3a06646095aeeecb919923f7d16.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/33/336cb3cbe0fd6cac96cd7cd5ca847c6a01f95b50.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/33/339482962bc4995e16e99ac9de9fc067636fd79e.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/34/3487e08d8ece1095997e89c7c0f4854990be76f0.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/35/3536b84a040ea58d94ce43c5f08cd412ab8785b2.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/36/368cb2a3a079de3d99eda179eb9dea0500e2ba58.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/37/37cf0f15ef9b05bcdd37d37aeb13e42bc8ca33f7.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/38/38a537e9ac930736e162be81c13c5f708ff948bd.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/3d/3d642c6f6cb6c2d801da2c59a7a402606832f62c.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/40/405df1a0d8a40eaf328e7eb2a7c392ca46f70385.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/42/420319f6e96818ecb49adbfe8979079d0d5d07fe.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/43/43295056d287f3da526dfb77915edc3de7551e3e.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/43/43b3ca892341431f697e1326aa693c1f252922be.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/43/43baffc48b0fbe649ed920bad713e2ccab9b7344.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/46/4675da3c2ce99400a2ca0bc65e376144adbbeb8d.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/49/49e54acbf5674212195e581848ec0d490282448f.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/4c/4c598c0b9181c664aa4e44531c74f0e328e4f8d4.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/50/50e2ed8f7773e60ae7d40b612db98554b8277b6e.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/54/54db2506b93b76c58174177245dcc6ef3fd0591f.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/55/555264dbbea1dc8db99e313eea256331522f4c48.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/55/55abcc242354c9c1c73538db5d8c7b984de5ca52.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/58/5830d72546907c962b6c9003fa923798a67b0406.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/59/5988521fc889dfd195d11b6348d9be60f48bd888.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/5a/5ab334d502d2ca2e875cc67d2019f416490f59a9.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/5b/5b5df141ef56f95d2edefb211c5f1138880d5ab0.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/5c/5c70cba8adb0b42c0da4d922498c265e5d8034d7.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/5e/5efbb05ceaef137124e5e71387a07380b061c650.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/5f/5f02bc5ec8d6220a872f1ca1fa2abaa92d46c361.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/5f/5f824ba4c9c616c77046b696f32732e0b23968da.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/62/620b2afa4c36cbfdd09c57807d8a662a5267ea51.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/63/6380eb13d87fc4242d2c6eec57f482ac8ca1ad1f.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/65/653e07693ee719cafbce662bb5e410646fe4695a.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/65/659b81ed171a6cd722fb2a0bf8b7cefe0bfe2965.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/69/697d8f2262c535cd61808a564b21fc10ea93f0db.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/6a/6a16279bea1179b3fd3a45736ecffd983a42272d.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/6e/6e4d88852c9e142541eaafe83711da5e5132dc3d.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/6e/6efe452b1f7a697db1c654130a9c2b872f528654.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/75/75c738c517217f6b09d51ca3036cf54a01891c4d.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/76/76ac840c5bc5ad44302daa921e7217149576b89e.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/78/78afa254ddd1004e47a9f109919d3ec9ce284097.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/7b/7b49be6a1335f41d4e717086a7769825cc8a64c8.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/7c/7c2641bef26579d9f90bdc0b740357527dd6e484.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/7f/7f1cefe1db5c5ee6a9b0eea4d9618cba4b1ac790.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/81/814bad015177103646b0216367fa9707361998d3.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/82/8271b9b49bd257075b49d1ec95e704b3892fa47b.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/85/850b9425421c3072a4898154d41776c02a4d64f7.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/86/864dfc9b99f5641f6d5a0081dc14d84872c1b3c6.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/86/86d3d5273ffd13841d246698eb648d85e178c4dc.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/86/86f11fca6a9c42d3678ec8af35c077a9790ce777.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/87/878c3da67e6aec79c9b8dba6f34368586f4bd097.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/87/87db440c06299666a8a1f407a6008c5bf6d70817.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/88/886222551781040325cfd3307fbfba2a1d434a9e.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/8a/8a8483cd4e3b4b6ac0567eab41c5655ace4b3a81.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/8d/8df9fc1055efeffdb72d499c064c05445adaa9be.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/8e/8e519cdec17eff94d7f092ee22188e6788000a89.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/8e/8ea56b2f234df8feb4b5ad78b3bd0941da7e259e.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/91/9155e7c411a2153287cd3ea460ca02842c1d4e45.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/93/93cab4423539955a25d17c83da6aee277a6402aa.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/94/94a521d4f9a69c4eb59f5bbe673c8803246bdf5e.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/9a/9a1d7349f6d9b5c7de2465eeb65aa5f300e3a8ef.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/9a/9af01aea73b614e5820a00bcc890840493f9dd70.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/9e/9e4a6d89370d2a41bd107d461304d86494436a7a.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/9f/9fd006c99f2e6ac8b19ffaa0c8919fd80cc29bda.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/a0/a03f9bbb0202d24d3313286f60ce08b214c013d2.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/a0/a0f216d0aaaeec369109e4b581eacd4e83e5ccb6.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/a3/a37d6eea30ec8c4c0e60a51673ed1c585b815e6f.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/a5/a5db56b975970ebe7048a5c824604d64559392b9.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/a6/a628e64772486ed3d173173419b5ee84dc5e6bba.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/a7/a71c1ef36706c4ddf7959c68d6c40920db3efe67.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/a8/a839a263600c034bb11411a7f762dfa917155d10.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/ad/ad1c6c898a44fde25045f71878b0ddd67b54315a.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/ad/ad4e2ea1864a85f5729a1347c2f8c49fdb3b2def.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/b4/b4c07014c99755b22119323980d6a73e097d82f0.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/b5/b516f6bd28cee1fe34144d897b702989782be4ec.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/b6/b6c74edb2dc383e0f3e28a0859fa87683fea18e2.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/b7/b797ac8509a8f8bc328b10153e0026449a6139ec.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/ba/ba81388bbac5bc223f94489b97a95a13f3c78e47.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/bd/bdb24b7ec836fbf6c60c4d7ad97d73f041a154a8.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/c1/c1b0fef186697125b66c1b4617fa3f9abc4d92eb.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/c3/c309b016717816749dc5d6b4f636735dfe67270a.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/c3/c37fb5c43ea499a005d88075a392ed2e09c331df.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/c4/c446b5eca2cce1faa7f2147a8b646cc774011de1.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/c5/c50da42e6f2ec33112261f46c30e5ea5b4a0f889.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/c5/c52e66a37621428e460df3392caf64b043d46ed2.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/c5/c569ddd86830207aedad6b48b273f14bc062b8aa.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/c6/c6323d6d6d262011faed18e758e9e83e7b6812b8.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/c6/c641615e851254111e268da42d72ae684b3ce967.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/c7/c70b26c4fbaaf89c8ceed3df16baa2aadc1a26e3.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/c9/c9e473d3a754c28ccba991a90384303494592494.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/ca/ca3883ac1c2a15b7abe2517026969c178b267b87.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/cc/ccbf94ed0150bee2592de51079dc30873292a1c5.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/cd/cd85df5b2c9c640ec5f60c1f22901cd6825ee23f.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/ce/ce00d8ae67bf86bcba46ef432dce129b011301f5.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/cf/cf43cfcf14bbc7f8e430b74a97eb3b260f16b08c.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/d0/d0016cbb556453b9ab63a7bd50ccff45fb82ad5c.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/d2/d2bc41ac84d64466e843d8a51a54d898e5b2fd6e.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/d8/d895d36b69495798e6c857e7230955bc0f21b815.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/d8/d8d2114a861ccc54937447b2e6271f607d88ecfb.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/db/db1c955d11291000f622a89794f32c0501be9af3.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/db/dbf616c5537074ace036340bdddf7948c138c3d7.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/dc/dcad257d86505e921618f7d85b60bf6ac2ce319d.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/dd/ddf2a30ad34bac4e9a1250f29c46ac0823d62a12.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/e0/e0e500feecd8274490a3bdbf64d2555c16a86261.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/e0/e0fb966a0cf742f2b4a449c47e4152a233c339d9.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/e1/e13972e35c952c105d15eececf78e807803284b7.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/e6/e6da9a45ecb8c766a8f7c2362ccf2976d20d17a9.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/e7/e779199003a7415a29d50ecf0bbfed04e031f1ab.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/e7/e7d280a54e16ef6a20e24c5b07d741990fd1fcee.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/ea/ead65e3c9c36846b2bf1d0ababa52735d0789df1.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/ee/eeee84a351d6e84d291b0c27e5d70014a3a2748d.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/ef/ef1d583626e7447f546995a5b296f34eb3364902.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/f1/f116555d117ded6e97229847ba3c8e8ca12e2f2b.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/f1/f1bac1aa606063286e767f7f9060ba1132029ad7.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/f5/f5da3f33448e67537e3df8ff63b010247b06841c.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/f7/f7de0f68bad86cdc731c0a01fff11333d915fe4c.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/fd/fdb172f327b67ec33f4a49b3c6b5ae061d53ca5b.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/fe/fe47ec617507e9ce5f6ce7ac9b179a3c9231882b.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/pristine/ff/ff8b56e8fb4273aaf4ad2a864948fd230470cfb2.svn-base" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/wc.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.svn/wc.db-journal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/small_project/GluttonousSnake" beforeDir="false" afterPath="$PROJECT_DIR$/static/small_project/GluttonousSnake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/small_project/GluttonousSnake/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/small_project/GluttonousSnake/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/small_project/GluttonousSnake/src/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/small_project/GluttonousSnake/src/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/small_project/GluttonousSnake/src/ground.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/small_project/GluttonousSnake/src/ground.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/small_project/GluttonousSnake/src/snake.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/small_project/GluttonousSnake/src/snake.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routers/api/uniApp/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routers/www/small_project/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/small_project/GluttonousSnake/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routers/api/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/small_project/GluttonousSnake/src/game.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="37">
+              <caret line="79" column="106" selection-start-line="79" selection-start-column="106" selection-end-line="79" selection-end-column="106" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/small_project/GluttonousSnake/src/snake.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="109" column="103" selection-start-line="109" selection-start-column="103" selection-end-line="109" selection-end-column="103" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/small_project/GluttonousSnake/src/init.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/small_project/GluttonousSnake/src/ground.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="247">
+              <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/small_project/GluttonousSnake/class/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="133">
+              <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>page_</find>
+      <find>select</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/routers/www/blog.js" />
+        <option value="$PROJECT_DIR$/routers/api/home/index.js" />
+        <option value="$PROJECT_DIR$/static/css/main.css" />
+        <option value="$PROJECT_DIR$/routers/www/read.js" />
+        <option value="$PROJECT_DIR$/routers/www/about.js" />
+        <option value="$PROJECT_DIR$/routers/www/home.js" />
+        <option value="$PROJECT_DIR$/libs/list.js" />
+        <option value="$PROJECT_DIR$/routers/admin/demoCtrl.js" />
+        <option value="$PROJECT_DIR$/libs/indexHome.js" />
+        <option value="$PROJECT_DIR$/static/css/index/home.css" />
+        <option value="$PROJECT_DIR$/template/index.ejs" />
+        <option value="$PROJECT_DIR$/template/admin/index.ejs" />
+        <option value="$PROJECT_DIR$/routers/api/myBlog/mappingDao.js" />
+        <option value="$PROJECT_DIR$/routers/www/small_demo/css.js" />
+        <option value="$PROJECT_DIR$/routers/api/myBlog/everyday.js" />
+        <option value="$PROJECT_DIR$/routers/www/small_demo/javaScript.js" />
+        <option value="$PROJECT_DIR$/routers/admin/index.js" />
+        <option value="$PROJECT_DIR$/routers/api/myBlog/tagDao.js" />
+        <option value="$PROJECT_DIR$/routers/api/myBlog/commentDao.js" />
+        <option value="$PROJECT_DIR$/static/small_demo/search_box/index.html" />
+        <option value="$PROJECT_DIR$/routers/api/myBlog/admin.js" />
+        <option value="$PROJECT_DIR$/routers/api/myBlog/articleDao.js" />
+        <option value="$PROJECT_DIR$/routers/api/index.js" />
+        <option value="$PROJECT_DIR$/routers/api/uniApp/index.js" />
+        <option value="$PROJECT_DIR$/routers/www/small_project/index.js" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/routers/www/index.js" />
+        <option value="$PROJECT_DIR$/static/small_project/GluttonousSnake/index.html" />
+        <option value="$PROJECT_DIR$/static/small_project/GluttonousSnake/src/game.js" />
+        <option value="$PROJECT_DIR$/static/small_project/GluttonousSnake/src/snake.js" />
+        <option value="$PROJECT_DIR$/static/small_project/GluttonousSnake/src/ground.js" />
+        <option value="$PROJECT_DIR$/config.js" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="240" />
+    <option name="y" value="32" />
+    <option name="width" value="644" />
+    <option name="height" value="680" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="server-ceshi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server-ceshi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server-ceshi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server-ceshi" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server-ceshi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server-ceshi" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="small_project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server-ceshi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server-ceshi" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="small_project" type="462c0819:PsiDirectoryNode" />
+              <item name="GluttonousSnake" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f897aef8-31c6-4333-9e82-375343cff2f7" name="Default Changelist" comment="" />
+      <created>1563190813976</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1563190813976</updated>
+      <workItem from="1563190820903" duration="2782000" />
+      <workItem from="1563361071342" duration="7444000" />
+      <workItem from="1563410430299" duration="24404000" />
+      <workItem from="1563530354141" duration="6084000" />
+      <workItem from="1563546633592" duration="3667000" />
+      <workItem from="1563591795721" duration="11375000" />
+      <workItem from="1563675268527" duration="3363000" />
+      <workItem from="1563794938101" duration="663000" />
+      <workItem from="1563847880517" duration="2818000" />
+      <workItem from="1564470134041" duration="981000" />
+      <workItem from="1564471153094" duration="2136000" />
+      <workItem from="1564490176577" duration="331000" />
+      <workItem from="1564490521776" duration="134000" />
+      <workItem from="1564490667805" duration="1083000" />
+      <workItem from="1564541090601" duration="3497000" />
+      <workItem from="1564636116809" duration="4582000" />
+      <workItem from="1564659194499" duration="4341000" />
+      <workItem from="1564715876580" duration="12638000" />
+      <workItem from="1564889349747" duration="3068000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="95391000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22391991" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="npm" order="2" side_tool="true" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.24295011" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/routers/www/reat.js" />
+    <entry file="file://$PROJECT_DIR$/routers/www/blog.js" />
+    <entry file="file://$PROJECT_DIR$/libs/list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="22" column="42" selection-start-line="22" selection-start-column="42" selection-end-line="22" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/admin/article.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libs/indexHome.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="20" column="46" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/admin/demoCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="61" selection-start-line="16" selection-start-column="61" selection-end-line="16" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="84" column="48" lean-forward="true" selection-start-line="84" selection-start-column="48" selection-end-line="84" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/index/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/admin/banner.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/admin/index.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2489">
+          <caret line="131" column="49" selection-start-line="131" selection-start-column="49" selection-end-line="131" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/api/myBlog/mappingDao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/api/myBlog/everyday.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/small_demo/search_box/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="167" column="9" lean-forward="true" selection-start-line="167" selection-start-column="9" selection-end-line="167" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/admin/login.ejs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="105" column="40" lean-forward="true" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/admin.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/api/myBlog/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/api/myBlog/articleDao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/api/home/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="41" selection-start-line="10" selection-start-column="41" selection-end-line="10" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/admin/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" column="46" selection-start-line="27" selection-start-column="46" selection-end-line="27" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/api/myBlog/commentDao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="30" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/api/myBlog/tagDao.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="47" selection-start-line="1" selection-start-column="47" selection-end-line="1" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/www/small_demo/css.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/www/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="23" selection-start-column="23" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="86" column="20" lean-forward="true" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/static.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="44" lean-forward="true" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/www/small_demo/javaScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="51" lean-forward="true" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/www/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="28" column="36" lean-forward="true" selection-start-line="28" selection-start-column="36" selection-end-line="28" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/small_project/GluttonousSnake/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/small_project/GluttonousSnake/src/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="79" column="106" selection-start-line="79" selection-start-column="106" selection-end-line="79" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/small_project/GluttonousSnake/src/snake.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="109" column="103" selection-start-line="109" selection-start-column="103" selection-end-line="109" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/small_project/GluttonousSnake/src/init.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/small_project/GluttonousSnake/src/ground.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/small_project/GluttonousSnake/class/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/www/small_project/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="12" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/api/uniApp/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="32" lean-forward="true" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
