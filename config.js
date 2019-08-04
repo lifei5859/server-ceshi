@@ -17,5 +17,8 @@ module.exports = {
     KEY_LEN: 1024,
     KEY_COUNT: 2048,
     // admin
-    PASS_SUFFIX: '_wocao%*'
+    PASS_SUFFIX: '_wocao%*',
+    //weixin
+    WX_ID: 'wx6be487b76f811240',
+    WX_SECRET: '700f4d00d5a0c2846617a75f6686f990'
 }

@@ -4,9 +4,9 @@ const fs = require('fs');
 const { HTTP_STATIC } = require('../../config')
 const home = require('./home');
 const jsDemo = require('./small_demo/javaScript')
-
+const project = require('./small_project')
 let router = new Router();
-
+console.log('wwwwwwwwwwwww')
 // router.get('/', async ctx => {
 //     await ctx.render('index', {
 //         title: '主页'
@@ -26,8 +26,7 @@ let router = new Router();
 // });
 router.use('', home);
 router.use('/smallDemo/js', jsDemo);
-// router.use('/about', about);
-// router.use('/read', read);
+router.use('/samllProject', project)
 
 
 
