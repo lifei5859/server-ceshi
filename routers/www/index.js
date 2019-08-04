@@ -26,7 +26,7 @@ console.log('wwwwwwwwwwwww')
 // });
 router.use('', home);
 router.use('/smallDemo/js', jsDemo);
-router.use('/samllProject', project)
+router.use('/smallProject', project)
 
 
 
