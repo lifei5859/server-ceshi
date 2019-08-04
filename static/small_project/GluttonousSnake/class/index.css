@@ -1,0 +1,81 @@
+*{
+    margin:0;
+    padding: 0;
+}
+.ground{
+    background-image: url("../img/map.jpg");
+
+}
+.floor{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.snakehead{
+    background-position-x: -2px;
+    background-position-y: 4px;
+    background-repeat: no-repeat;
+    background-size: 30px 45px;
+    transform: rotateZ(90deg);
+    background-color: transparent;
+}
+.snakebody{
+    background-position-x: -18px;
+    background-position-y: -37px;
+    background-repeat: no-repeat;
+    background-size: 250% 520%;
+}
+.food{
+    background-position-x: -40px;
+    background-position-y: 1px;
+    background-repeat: no-repeat;
+    background-size: 140px 60px;
+}
+.toison{
+    background-position-x: -40px;
+    background-position-y: 1px;
+    background-repeat: no-repeat;
+    background-size: 60px 60px;
+}
+.transfer{
+    background-image: url("../img/transfer/t1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:150%;
+    animation: show 2s linear infinite ;
+}
+@keyframes show {
+    0%{
+        background-image: url("../img/transfer/t1.png");
+    }
+    10%{
+        background-image: url("../img/transfer/t2.png");
+    }
+    20%{
+        background-image: url("../img/transfer/t3.png");
+    }
+    30%{
+        background-image: url("../img/transfer/t4.png");
+    }
+    40%{
+        background-image: url("../img/transfer/t5.png");
+    }
+    50%{
+        background-image: url("../img/transfer/t6.png");
+    }
+    60%{
+        background-image: url("../img/transfer/t7.png");
+    }
+    70%{
+        background-image: url("../img/transfer/t8.png");
+    }
+    80%{
+        background-image: url("../img/transfer/t9.png");
+    }
+    90%{
+        background-image: url("../img/transfer/t10.png");
+    }
+    100%{
+        background-image: url("../img/transfer/t1.png");
+    }
+}
