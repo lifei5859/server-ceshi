@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f897aef8-31c6-4333-9e82-375343cff2f7" name="Default Changelist" comment="" />
+    <list default="true" id="f897aef8-31c6-4333-9e82-375343cff2f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/routers/www/small_demo/javaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/www/small_demo/javaScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/small_demo/es5Observer" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -49,15 +52,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/static/small_demo/es5Observer/Observer.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -67,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routers/www/small_demo/javaScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="380">
+              <caret line="20" column="62" lean-forward="true" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -96,6 +90,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -142,9 +137,9 @@
         <option value="$PROJECT_DIR$/routers/admin/index.js" />
         <option value="$PROJECT_DIR$/libs/jwtDecode.js" />
         <option value="$PROJECT_DIR$/routers/api/uniApp/index.js" />
-        <option value="$PROJECT_DIR$/routers/www/small_demo/javaScript.js" />
         <option value="$PROJECT_DIR$/config.js" />
         <option value="$PROJECT_DIR$/static/small_demo/es5Observer/Observer.html" />
+        <option value="$PROJECT_DIR$/routers/www/small_demo/javaScript.js" />
       </list>
     </option>
   </component>
@@ -218,13 +213,6 @@
               <item name="server-ceshi" type="b2602c69:ProjectViewProjectNode" />
               <item name="server-ceshi" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="small_demo" type="462c0819:PsiDirectoryNode" />
-              <item name="es5Observer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="server-ceshi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="server-ceshi" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="small_project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -234,6 +222,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.15.3" />
@@ -291,12 +280,12 @@
       <workItem from="1564889349747" duration="3366000" />
       <workItem from="1564896102318" duration="5971000" />
       <workItem from="1565016490901" duration="238000" />
-      <workItem from="1570564285091" duration="1555000" />
+      <workItem from="1570564285091" duration="2276000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103453000" />
+    <option name="totallyTimeSpent" value="104174000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -588,12 +577,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routers/www/small_demo/javaScript.js">
+    <entry file="file://$PROJECT_DIR$/static/small_demo/es5Observer/Observer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="133">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/small_demo/es5Observer/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/config.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -602,10 +594,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/small_demo/es5Observer/Observer.html">
+    <entry file="file://$PROJECT_DIR$/routers/www/small_demo/javaScript.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+        <state relative-caret-position="380">
+          <caret line="20" column="62" lean-forward="true" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
         </state>
       </provider>
     </entry>
