@@ -2,25 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f897aef8-31c6-4333-9e82-375343cff2f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/jwtDecode.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/Observer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/indexHome.js" beforeDir="false" afterPath="$PROJECT_DIR$/libs/indexHome.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/list.js" beforeDir="false" afterPath="$PROJECT_DIR$/libs/list.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/admin/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/home/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/home/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/uniApp/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/uniApp/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/www/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/www/about.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/www/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/www/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/www/read.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/www/read.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/www/small_demo/javaScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/routers/www/small_demo/javaScript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/index/home.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index/home.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/small_demo/es5Observer" beforeDir="false" afterPath="$PROJECT_DIR$/static/small_demo/es5Observer" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/small_demo/es5Observer/Observer.html" beforeDir="false" afterPath="$PROJECT_DIR$/static/small_demo/es5Observer/Observer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/small_demo/es5Observer/Observer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/admin/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/template/admin/index.ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/template/index.ejs" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/config.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="209">
-              <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+              <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -82,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/routers/www/small_demo/javaScript.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -91,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/routers/www/small_project/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -222,6 +207,13 @@
               <item name="server-ceshi" type="b2602c69:ProjectViewProjectNode" />
               <item name="server-ceshi" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="small_demo" type="462c0819:PsiDirectoryNode" />
+              <item name="es5Observer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="server-ceshi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="server-ceshi" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="small_project" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -288,18 +280,17 @@
       <workItem from="1564889349747" duration="3366000" />
       <workItem from="1564896102318" duration="5971000" />
       <workItem from="1565016490901" duration="238000" />
-      <workItem from="1570564285091" duration="724000" />
+      <workItem from="1570564285091" duration="1240000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="102622000" />
+    <option name="totallyTimeSpent" value="103138000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20475562" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20475562" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -312,7 +303,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2733711" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2733711" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -581,21 +572,21 @@
     <entry file="file://$PROJECT_DIR$/routers/www/small_project/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="9" column="49" lean-forward="true" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routers/www/small_demo/javaScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
         </state>
       </provider>
     </entry>
