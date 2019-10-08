@@ -2,11 +2,44 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Title</title>
+    <style>
+        .wrapper {
+            width: 400px;
+            margin: 100px auto;
+        }
+        .wrapper input {
+            border: 1px solid #e6e6e6;
+            padding: 4px 4px;
+            border-radius: 5px;
+            outline: none;
+            width: 100%;
+            box-sizing: border-box;
+            height: 40px;
+            font-size: 18px;
+        }
+        .wrapper .title {
+            color: rgb(197, 92, 65)
+        }
+        .wrapper #show {
+            padding: 5px 8px;
+            border: 1px dotted #6ad;
+            min-height: 20.8px;
+        }
+        .wrapper input[type="text"]:focus {
+            border: 2px solid rgb(94, 132, 170);
+        }
+    </style>
 </head>
 <body>
-    
+ 
+<div class="wrapper">
+    <p class="title">你可以在控制台输入: oData.value=...来更新视图</p>
+    <input type="text" id="demo" />
+    <p id="show"></p>
+</div>
+
+<script src="./Observer.js">
+</script>
 </body>
 </html>
