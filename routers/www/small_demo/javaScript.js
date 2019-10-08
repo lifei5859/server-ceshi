@@ -15,6 +15,11 @@ function serverRouter () {
         ctx.res.writeHead(200, {'Content-Type': 'text/html' });
         ctx.body = fs.readFileSync(`${HTTP_STATIC}/small_demo/search_box/index.html`);
     });
+        router.get('/Observer', async ctx => {
+        console.log(666)
+        ctx.res.writeHead(200, {'Content-Type': 'text/html' });
+        ctx.body = fs.readFileSync(`${HTTP_STATIC}/small_demo/es5Observer/Observer.html`);
+    })
 
     return router.routes();
 }

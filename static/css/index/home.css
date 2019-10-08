@@ -22,4 +22,50 @@
     width: 24px;
     border-radius: 50%;
 }
+.explain-box {
+    padding: 0 10px;
+}
+.explain {
+    padding: 2px;
+    font-size: 18px;
+    text-align: center;
+}
+.about-box {
+    padding: 0 20px;
+  
+}
+.about-box .about-me {
+    font-size: 15px;
+    color: #356;
+}
+.about-box .about-me .my-name {
+    font-size: 14px;
+    color: #d7bc91;
+}
+.about-box .about-me .link-read {
+    text-decoration: none;
+    color: #e66;
+}
+.about-box .about-me .link-read:hover {
+    color: #000;
+}
+.about-demarcation {
+    border-top: 1px dashed #bef;
+    margin-top: 20px;
+    padding-top: 10px;
+}
 
+.about-box .about-me .link {
+    font-size: 16px;
+}
+.about-box .about-website {
+    font-size: 16px;
+}
+.about-box .about-website p:nth-of-type(1) {
+    text-indent: 30px;
+}
+.author-box, .title-box {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

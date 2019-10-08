@@ -38,10 +38,15 @@ router.post('/login', async ctx => {
 });
 router.all('*', async (ctx, next) => {
     if (ctx.session['admin']) {
+        // ctx.redirect('/admin/demoList');
         await next();
     } else {
         ctx.redirect('/admin/login');
     }
+});
+
+router.get('/', ctx => {
+    ctx.redirect('/admin/demoList');
 });
 
 // const tableConf = [

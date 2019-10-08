@@ -20,5 +20,7 @@ module.exports = {
     PASS_SUFFIX: '_wocao%*',
     //weixin
     WX_ID: 'wx6be487b76f811240',
-    WX_SECRET: '700f4d00d5a0c2846617a75f6686f990'
+    WX_SECRET: '700f4d00d5a0c2846617a75f6686f990',
+    //token
+    tokenExpiresTime: 10
 }

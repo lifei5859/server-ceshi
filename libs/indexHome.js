@@ -5,7 +5,7 @@ const common = require('./common');
 const fs = require('fs');
 const moment = require('moment');
 
-module.exports = function (pageConf, list, title, page) {
+module.exports = function (pageConf, list, title, page, explain) {
     let router = new Router();
 
     const pageTypes = {
@@ -14,12 +14,28 @@ module.exports = function (pageConf, list, title, page) {
         '/about': '关于',
     };
     router.get('/', async ctx => {
-        let data = await ctx.db.query(`SELECT * FROM ${list}`);
-
-        data.forEach((item, index) => {
-            item.admin_technology = item.admin_technology.split(',')
-           console.log(item.admin_technology);
-        });
+        let data
+        try {
+            data = await ctx.db.query(`SELECT * FROM ${list}`)
+        } catch (e) {
+            console.log(e)
+        }
+        if (data && list === 'demo_list') {
+            data.forEach(item => {
+                item.admin_technology = item.admin_technology.split(',')
+            });
+        }
+        if (list === 'article') {
+            // data.forEach(async item => {
+            //     let type = await ctx.db.query(`SELECT * FROM catalog WHERE ID=?`, [item.catalog_ID])
+            //     item.type = type.title
+            // });
+            for (let index = 0; index < data.length; index++) {
+                let type = await ctx.db.query(`SELECT * FROM catalog WHERE ID=?`, [data[index].catalog_ID])
+                console.log(type)
+                data[index].type = type[0].title
+            }
+        }
         // tableConf.forEach(async item => {
         //     console.log(item)
         //     if (item.type === 'select') {
@@ -33,10 +49,14 @@ module.exports = function (pageConf, list, title, page) {
             pageConf,
             title,
             page,
-            pageTypes
+            pageTypes,
+            explain,
+            list
         });
     });
-
+    // router.get('/read', async ctx => {    
+ 
+    // });
     // router.post('/list', async ctx => {
     //     let req = ctx.request.fields;
     //     console.log(req)

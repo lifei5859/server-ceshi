@@ -90,19 +90,46 @@ module.exports = function (tableConf, list, title, page_type) {
         let keys = [];
         let values = [];
         let imgChange = {};
-        tableConf.forEach(({name, type}) => {
-            if (type === 'file') {
-                oldImg[name] = data[0][name];
-                if (req[name].length && req[name] && req[name][0].size) {
-                    imgChange[name] = true;
-                    keys.push(name);
-                    values.push(path.basename(req[name][0].path));
+        // tableConf.forEach(async ({name, type}) => {
+        //     if (type === 'file') {
+        //         oldImg[name] = data[0][name];
+        //         if (req[name].length && req[name] && req[name][0].size) {
+        //             imgChange[name] = true;
+        //             keys.push(name);
+        //             values.push(path.basename(req[name][0].path));
+        //         };
+        //     } else {
+        //         keys.push(name);
+        //         if (req[name] === undefined) {
+        //             let data = await ctx.db.query(`SELECT ${name} FROM ${list} WHERE ID=?`, [id]);
+        //             values.push(data[0][name])
+        //             console.log(data[0][name])
+        //         } else {
+        //             values.push(req[name]);
+        //         }
+        //     }
+        // });
+        for (let i = 0; i < tableConf.length; i++) {
+            if (tableConf[i].type === 'file') {
+                oldImg[tableConf[i].name] = data[0][tableConf[i].name];
+                if (req[tableConf[i].name].length && req[tableConf[i].name] && req[tableConf[i].name][0].size) {
+                    imgChange[tableConf[i].name] = true;
+                    keys.push(tableConf[i].name);
+                    values.push(path.basename(req[tableConf[i].name][0].path));
                 };
             } else {
-                keys.push(name);
-                values.push(req[name]);
+                keys.push(tableConf[i].name);
+                if (req[tableConf[i].name] === undefined) {
+                    let data = await ctx.db.query(`SELECT ${tableConf[i].name} FROM ${list} WHERE ID=?`, [id]);
+                    values.push(data[0][tableConf[i].name])
+                    console.log(data[0][tableConf[i].name])
+                } else {
+                    values.push(req[tableConf[i].name]);
+                }
             }
-        });
+        }
+        console.log(keys)
+        console.log(values)
         await ctx.db.query(`UPDATE ${list} SET ${keys.map(key=>(`${key}=?`)).join(',')} WHERE ID=?`, [...values, id]);
         tableConf.forEach(async ({name, type}) => {
             if (type === 'file' && imgChange[name]) {

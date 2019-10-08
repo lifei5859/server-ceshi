@@ -71,9 +71,9 @@
         });
 
         let tempForm =  `<form class="layui-form" action="" id="form" enctype="multipart/form-data">
-                    <%tableConf.forEach((item) => {
-        if (!item.isWrite){%>
-                        <div class="layui-form-item">
+                           <%tableConf.forEach((item) => {
+                          if (!item.isWrite){%>
+                          <div class="layui-form-item">
                           <label class="layui-form-label"><%=item.title%></label>
                          <%if(item.type == "textarea"){%>
                           <div class="layui-input-block">
@@ -83,9 +83,11 @@
                               <div class="layui-input-block">
                                 <select name="<%=item.name%>" lay-verify="required">
                                   <option value=""></option>
-                                  <%item.vals.forEach((val)=>{%>
+                                  <%if(item.vals){%>
+                                    <%item.vals.forEach((val)=>{%>
                                     <option value="<%=val.ID%>"><%=val.title%></option>
                                     <%})%>
+                                    <%}%>
                                 </select>
                               </div>
                             <%} else if (item.type == "radio") {%>
@@ -115,18 +117,20 @@
                   </form>`
         $('#add_btn').on('click', () => {
             // $('#layerOpen').css({display: 'block'});
-
             layer.open({
                 content: tempForm,
-                title: 'banner管理',
+                title: '<%=title%>',
                 area: ['60%'],
-                yes: async function () {
+                yes: async function (index) {
+                    layer.load()
                     let form = new FormData($('#form')[0]);
+                    layer.close(index)
                     let data = await fetch('/admin/<%=page_type%>/list', {
                         method: 'post',
                         body: form
                     })
                     let res = await data.json();
+                    layer.closeAll('loading')
                     layer.msg(res.data);
                     setTimeout(() => {
                         window.location.reload();
@@ -190,9 +194,11 @@
                               <div class="layui-input-block">
                                 <select name="<%=item.name%>" lay-verify="required">
                                   <option value=""></option>
-                                  <%item.vals.forEach((val)=>{%>
+                                  <%if(item.vals){%>
+                                    <%item.vals.forEach((val)=>{%>
                                     <option value="<%=val.ID%>"><%=val.title%></option>
                                     <%})%>
+                                    <%}%>
                                 </select>
                               </div>
                             <%} else if (item.type == "radio") {%>
@@ -221,13 +227,16 @@
                 content,
                 title: 'banner管理',
                 area: ['60%'],
-                yes: async function () {
+                yes: async function (index) {
+                    layer.load()
                     let form = new FormData($('#form')[0]);
+                    layer.close(index)
                     let data = await fetch(`/admin/<%=page_type%>/update/${id}`, {
                         method: 'post',
                         body: form
                     });
                     let res = await data.json();
+                    layer.closeAll('loading')
                     if (!res.status) {
                         layer.msg(res.data, {icon: 2});
                         return;

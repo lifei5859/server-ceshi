@@ -4,12 +4,11 @@ const {HTTP_HOST, HTTP_UPLOAD} = require('../../../config');
 const common = require('../../../libs/common');
 const fs = require('fs');
 
-function serverRouter (tableConf, list, title, page_type) {
+function serverRouter () {
     let router = new Router();
 
     router.get('/getDemo', async ctx => {
         let data = await ctx.db.query(`select * from demo_list`);
-        console.log(data);
         ctx.body = common.resJson(1, data);
     });
 

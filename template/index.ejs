@@ -1,39 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%=title%></title>
-    <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/index/home.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title><%=title%></title>
+  <link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/index/home.css">
 </head>
+
 <body class="main-wrapper">
-    <nav class="navbar navbar-default container-fluid">
-        <div class="row">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header col-xs-6 col-sm-4 col-md-3">
-            <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+  <nav class="navbar navbar-default container-fluid">
+    <div class="row">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header col-xs-6 col-sm-4 col-md-3">
+        <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
               <span class="sr-only">Toggle navigation</span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button> -->
-            <a class="navbar-brand main-title" href="#">我的Demo汇</a>
-          </div>
+        <a class="navbar-brand main-title" href="/">我的Demo汇</a>
+      </div>
 
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <!--<li><a href="/">主页</a></li>-->
-              <!--<li><a href="/reat"> 阿飞读书会 </a></li>-->
-              <!--<li><a href="/about">关于</a></li>-->
-                <%for(let item in pageTypes) {%>
-                    <li><a href="<%=item%>"> <%=pageTypes[item]%> </a></li>
-                <%}%>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <!--<li><a href="/">主页</a></li>-->
+          <!--<li><a href="/reat"> 阿飞读书会 </a></li>-->
+          <!--<li><a href="/about">关于</a></li>-->
+          <%for(let item in pageTypes) {%>
+          <li><a href="<%=item%>"> <%=pageTypes[item]%> </a></li>
+          <%}%>
             </ul>
-
+            <!-- <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true"> -->
+            <!-- </div> -->
               <!--- -->
             <!-- <form class="navbar-form navbar-left">
               <div class="form-group">
@@ -61,65 +64,184 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
                     <%for(let item in pageTypes) {%>
-                        <li><a href="<%=item%>"> <%=pageTypes[item]%> </a></li>
-                    <%}%>
+          <li><a href="<%=item%>"> <%=pageTypes[item]%> </a></li>
+          <%}%>
                 </ul>
             </div>
         </div>
 
       </nav>
+      <%if(explain){%>
+          <div class="explain-box">
+            <div class="alert alert-success" role="alert">
+              <p class="explain">
+                <%=explain%>
+              </p>
+            </div>
+          </div>
+          <%}%>
       <section class="row my-row">
         <%pageConf.forEach((item, index) => {%>
-              <div class="panel <%=item.type%>">
-                  <div class="panel-heading">
-                      <h3 class="panel-title"><%=item.title%></h3>
+          <div class="panel <%=item.type%>">
+            <div class="panel-heading">
+              <h3 class="panel-title"><%=item.title%></h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <%if(data){%>
+                <%data.forEach((ele, index) => {%>
+                <%if (item.name === ele.type || item.name === ele.type){%>
+                <%if(list=='article'){%>
+                <div class=".col-lg-2 col-md-3 col-sm-4">
+                  <div class="thumbnail">
+                    <img src="/upload/<%=ele.banner_img_src%>" style="max-height: 260px; min-height: 160px" alt="...">
+                    <div class="caption">
+                      <h3 id="title<%=ele.id%>" tabindex="0" class="title-box"
+                          data-container="body"
+                          data-placement="top" role="button" 
+                          data-toggle="popover" data-trigger="focus"
+                          data-content="《<%=ele.title%>》">
+                          《<%=ele.title%>》
+                        </h3>
+                      <div class="panel panel-default" style="border: none">
+                        <div class="" role="tab" id="headingOne">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#<%=ele.id%>"
+                            aria-expanded="true" aria-controls="collapseOne">
+                            查看简介
+                          </a>
+                        </div>
+                        <div id="<%=ele.id%>" class="panel-collapse collapse" role="tabpanel"
+                          aria-labelledby="headingOne">
+                          <div class="panel-body">
+                            <%=ele.content%>
+                          </div>
+                        </div>
+                      </div>
+                      <p></p>
+
+                      <p id="author<%=ele.id%>" tabindex="0" class="author-box" data-container="body"
+                        data-placement="top" role="button" data-toggle="popover" data-trigger="focus" title="本书作者"
+                        data-content="<%=ele.author%>">
+                        <span>作者：</span>
+                        <span>
+                          <%=ele.author%>
+                        </span>
+                      </p>
+                      <!-- <button type="button" 
+                                          class="btn btn-default" 
+                                          data-container="body" 
+                                          data-toggle="popover" 
+                                          data-placement="left" 
+                                          data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
+                                              Popover on 左侧
+                                            </button> -->
+
+
+                    </div>
                   </div>
-                  <div class="panel-body">
-                      <div class="row">
-                          <%data.forEach((ele, index) => {%>
-                                <%if (item.name === ele.type){%>
-                                  <div class="col-md-4">
-                                      <div class="panel panel-default">
-                                          <div class="panel-heading">
-                                              <a href="<%=ele.demo_link%>"><h3 class="panel-title"><%=ele.demo_title%></h3></a>
-                                          </div>
-                                          <div class="panel-body">
-                                              <%=ele.demo_describe%>
-                                          </div>
+                </div>
+                <%}else{%>
+                <div class="col-md-4">
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <a href="<%=ele.demo_link%>">
+                        <h3 class="panel-title"><%=ele.demo_title%></h3>
+                      </a>
+                    </div>
+                    <div class="panel-body">
+                      <%=ele.demo_describe%>
+                    </div>
 
 
-                                              <div class="container-fluid">
-                                                  <!--<p class="row function">-->
-                                                      <!--<span class="col-md-6 col-xs-6 col-md-6 col-lg-6">主运行平台:&nbsp;&nbsp; <%=ele.main_platform%></span>-->
-                                                      <!--<span class="col-md-6 col-xs-6 col-md-6 col-lg-6">是否响应式:&nbsp;&nbsp; <%=ele.is_self_adaption%></span>-->
-                                                  <!--</p>-->
+                    <div class="container-fluid">
+                      <!--<p class="row function">-->
+                      <!--<span class="col-md-6 col-xs-6 col-md-6 col-lg-6">主运行平台:&nbsp;&nbsp; <%=ele.main_platform%></span>-->
+                      <!--<span class="col-md-6 col-xs-6 col-md-6 col-lg-6">是否响应式:&nbsp;&nbsp; <%=ele.is_self_adaption%></span>-->
+                      <!--</p>-->
 
-                                                  <p class="text-right">
-                                                  <span class="label label-primary"><%=ele.main_platform%></span>
-                                                  <%if (ele.is_self_adaption == '是'){%>
-                                                    <span class="label label-primary">响应式</span>
-                                                  <%}%>
-                                                      <a href="<%=ele.git_link%>"><img class="git-icon" src="./img/git.jpg" alt="">gitHub</a>
-                                                  </p>
-                                              </div>
-                                          <div class="technology">
-                                              <span class="technology-title">技术应用:</span>
-                                              <%ele.admin_technology.forEach(technologyItem => {%>
-                                              <span class="label label-success"><%=technologyItem%></span>
-                                              <%})%>
-                                          </div>
-                                      </div>
-                                  </div>
-                              <%}%>
-                          <%})%>
+                      <p class="text-right">
+                        <span class="label label-primary"><%=ele.main_platform%></span>
+                        <%if (ele.is_self_adaption == '是'){%>
+                        <span class="label label-primary">响应式</span>
+                        <%}%>
+                                                    <a href="<%=ele.git_link%>"><img class="git-icon"
+                          src="./img/git.jpg" alt="">gitHub</a>
+                      </p>
+                    </div>
+                    <div class="technology">
+                      <span class="technology-title">技术应用:</span>
+                      <%ele.admin_technology.forEach(technologyItem => {%>
+                      <span class="label label-success"><%=technologyItem%></span>
+                      <%})%>
+                    </div>
+                  </div>
+                </div>
+                <%}%>
+                        <%}%>
+                <%})%>
+                <%}else if(list == 'about'){%>
+                <div class="about-box">
+                  <%if(item.name=='me'){%>
+                  <div class="about-me">
+                    <p>本人不是大神，小白一枚。</p>
+                    <p>站长：<span class="my-name">李飞</span>， 性别：男， 四川省</p>
+                    <p>认为javascript是世界上最好的语言没有之一</p>
+                    <p>2015年开始自学成才。。。</p>
+                    <p>2016年末开始从事前端至今</p>
+                    <p>国企-->小型网络公司-->创业公司-->。。。</p>
+                    <p>懒癌晚期，有好点子-----迟早更新</p>
+                    <p>爱好看书，<a class="link-read" href="/read">看的爽书推荐给大家</a></p>
+                    <p class="about-demarcation">个人博客只是把项目写了出来，这里就推csdn吧</p>
+                    <p class="link">csdn地址: <a
+                        href="https://blog.csdn.net/weixin_43139949">https://blog.csdn.net/weixin_43139949</a></p>
+                    <p class="link">github：<a href="https://github.com/lifei5859">https://github.com/lifei5859</a></p>
+                  </div>
+                  <%}else{%>
+                  <div class="about-website">
+                    <p>
+                      从业有几年了，看到很多高玩都有自己的个人博客网站，就想着自己也搞一个。但看了一圈之后，觉得意思不大。想了一段时间，还是搞一个分享网站，主要分享自己写的小demo，好玩的小项目，和一些自认为的好书。当然，本人懒汉一枚，只能说迟早更新。
+                    </p>
+                    <p>技术：nodejs -- 腾讯云 -- ejs</p>
+                  </div>
+                  <%}%>
+                            </div>
+                          <%}else{%>
+                  <div class="col-md-3">
+                    <div class="thumbnail">
+                      <img src="https://cn.bing.com/th?id=OIP.YbKK35m0_fM_Ggt13p-ZagHaIc&pid=Api&rs=1" alt="...">
+                      <div class="caption">
+                        <h3>《书名， 书名》</h3>
+                        <p>
+                          这里是简介，这里是心得，这里是简介，这里是心得，这里是简介，这里是心得，这里是简介，这里是心得，这里是简介，这里是心得，这里是简介，这里是心得，这里是简介，这里是心得，这里是简介，这里是心得，这里是简介，这里是心得
+                        </p>
+                        <p>
+                          <span>作者：</span>
+                          <span>啦啦</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <%}%>
                       </div>
                   </div>
               </div>
         <%})%>
 
-      </section>
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
-    <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-    <script src="/js/main.js"></script>
+                  </section>
+                  <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+                  <script src="./bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+                  <script src="/js/main.js"></script>
+                  <script>
+                    '<%data.forEach(item => {%>'
+                    $('#author<%=item.id%>').one('click', function () {
+                      $(this).popover('show')
+                    })
+                    $('#title<%=item.id%>').one('click', function () {
+                      $(this).popover('show')
+                    })
+                    '<%})%>'
+
+                  </script>
 </body>
+
 </html>

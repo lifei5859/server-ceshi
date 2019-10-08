@@ -1,12 +1,13 @@
 const Router = require('koa-router');
 const path = require('path');
 const fs = require('fs');
-const { HTTP_STATIC } = require('../../config')
+const { HTTP_STATIC } = require('../../config');
 const home = require('./home');
-const jsDemo = require('./small_demo/javaScript')
-const project = require('./small_project')
+const read = require('./read');
+const about = require('./about')
+const jsDemo = require('./small_demo/javaScript');
+const project = require('./small_project');
 let router = new Router();
-console.log('wwwwwwwwwwwww')
 // router.get('/', async ctx => {
 //     await ctx.render('index', {
 //         title: '主页'
@@ -25,8 +26,10 @@ console.log('wwwwwwwwwwwww')
 //     });
 // });
 router.use('', home);
+router.use('/read', read);
+router.use('/about', about);
 router.use('/smallDemo/js', jsDemo);
-router.use('/smallProject', project)
+router.use('/smallProject', project);
 
 
 
