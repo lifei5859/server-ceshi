@@ -69,3 +69,17 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    color: #abc;
+}
+.footer p {
+    margin: 0;
+    padding-left: 4px;
+}
+.footer img {
+    height: 16px;
+    margin-left: 4px;
+}
