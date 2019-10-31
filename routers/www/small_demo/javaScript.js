@@ -1,10 +1,10 @@
 const Router = require('koa-router');
 const path = require('path');
-const {HTTP_HOST, HTTP_UPLOAD, HTTP_STATIC} = require('../../../config');
+const { HTTP_HOST, HTTP_UPLOAD, HTTP_STATIC } = require('../../../config');
 const common = require('../../../libs/common');
 const fs = require('fs');
 // const moment = require('moment');
-function serverRouter () {
+function serverRouter() {
     let router = new Router();
 
     router.get('/searchBox', async ctx => {
@@ -12,14 +12,17 @@ function serverRouter () {
         // ctx.render('www/small_demo/searchBox', {
         //     HTTP_HOST
         // })
-        ctx.res.writeHead(200, {'Content-Type': 'text/html' });
+        ctx.res.writeHead(200, { 'Content-Type': 'text/html' });
         ctx.body = fs.readFileSync(`${HTTP_STATIC}/small_demo/search_box/index.html`);
     });
-        router.get('/Observer', async ctx => {
-        console.log(666)
-        ctx.res.writeHead(200, {'Content-Type': 'text/html' });
+    router.get('/Observer', async ctx => {
+        ctx.res.writeHead(200, { 'Content-Type': 'text/html' });
         ctx.body = fs.readFileSync(`${HTTP_STATIC}/small_demo/Observer/Observer.html`);
-    })
+    });
+    router.get('/upload', async ctx => {
+        ctx.res.writeHead(200, { 'Content-Type': 'text/html' });
+        ctx.body = fs.readFileSync(`${HTTP_STATIC}/small_demo/upload/index.html`);
+    });
 
     return router.routes();
 }

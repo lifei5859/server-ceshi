@@ -7,6 +7,7 @@ const tag = require('./myBlog/tagDao');
 const comment = require('./myBlog/commentDao');
 const everyday = require('./myBlog/everyday');
 const admin = require('./myBlog/admin');
+const javascript = require('./small_demo/javascript')
 const uniApp = require('./uniApp/index');
 const koaJwt = require('koa-jwt');
 let router = new Router();
@@ -16,6 +17,7 @@ router.use('/blog/tag', tag);
 router.use('/blog/comment', comment);
 router.use('/blog/everyday', everyday);
 router.use('/blog/admin', admin);
+router.use('/smallDemo/javascript', javascript)
 router.use('/uniApp', uniApp);
 router.use('', home);
 module.exports = router.routes();
