@@ -196,14 +196,14 @@
                     if (ele.type.indexOf('image') !== -1) {
                         let img = new Image();
                         let item = document.createElement('li');
-                        
-                        img.src = 'http://127.0.0.1/upload/' + ele.path;
+
+                        img.src = 'http://www.fgdemoshow.cn/upload/' + ele.path;
                         item.appendChild(img);
                         oUl.appendChild(item);
                     } else {
                         let a = document.createElement('a');
                         let item = document.createElement('li');
-                        a.href = 'http://127.0.0.1/upload/' + ele.path;
+                        a.href = 'http://www.fgdemoshow.cn/upload/' + ele.path;
                         console.log(ele);
                         a.innerText = ele.name
                         a.download = ele.name
