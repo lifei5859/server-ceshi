@@ -24,6 +24,16 @@ function serverRouter() {
         ctx.body = fs.readFileSync(`${HTTP_STATIC}/small_demo/upload/index.html`);
     });
 
+    router.get('/vueRouterHash', async ctx => {
+        ctx.res.writeHead(200, { 'Content-Type': 'text/html' });
+        ctx.body = fs.readFileSync(`${HTTP_STATIC}/small_demo/vue_router/vueHash.html`);
+    })
+
+    router.get('/vueRouterHistory', async ctx => {
+        ctx.res.writeHead(200, { 'Content-Type': 'text/html' });
+        ctx.body = fs.readFileSync(`${HTTP_STATIC}/small_demo/vue_router/vueHistory.html`);
+    })
+
     return router.routes();
 }
 

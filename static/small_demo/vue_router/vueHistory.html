@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vueHistory演示</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .header-nav {
+            width: 100%;
+            overflow: hidden;
+            box-shadow: 0 0 20px 5px #eee;
+        }
+
+        .header-nav ul {
+            overflow: hidden;
+            margin-left: 50px;
+        }
+
+        .header-nav ul .nav-item {
+            float: left;
+            padding: 10px 2px;
+        }
+
+        .header-nav ul .nav-item a {
+            padding: 10px 30px;
+            text-decoration: none;
+        }
+
+        .header-nav ul .nav-item a:hover {
+            background: #dedede;
+        }
+
+        .admin,
+        .about {
+            font-size: 20px;
+            font-weight: bold;
+            color: #9a9a9a;
+            text-align: center;
+            height: 300px;
+            line-height: 300px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-nav">
+    <ul>
+        <li class="nav-item">
+            <a href="/" class="router-link">首页</a>
+        </li>
+        <li class="nav-item">
+            <a href="/about" class="router-link">关于</a>
+        </li>
+    </ul>
+</div>
+<div class="router-view">
+
+</div>
+<div>
+    ps: 由于和我的展示网站搞在了一个服务器下， 所以url显示有点问题， 还有刷新会跳转。。。，懒得搭nginx额
+</div>
+
+
+<script type="text/javascript">
+    var routerLink = document.querySelectorAll('a');
+    var routerView = document.getElementsByClassName('router-view')[0];
+
+
+    function changeContent(href) {
+        href = href.replace('/smalldemo/js/vueRouterHistory','/')
+        switch (href) {
+            case '/':
+                routerView.innerHTML = `<div class="admin">
+                        我是首页
+                    </div>`;
+                break;
+            case '/about':
+                routerView.innerHTML = `<div class="about">
+                        关于我们
+                    </div>`;
+                break;
+        }
+    }
+    // 初始行为
+    // 获取url路径
+    changeContent(location.pathname);
+
+
+    for (var i = routerLink.length - 1; i >= 0; i--) {
+        routerLink[i].addEventListener('click', function (e) {
+            e.preventDefault();
+            var href = e.target.getAttribute('href');
+
+            // 变更地址栏
+            history.pushState({}, '', href);
+            // 匹配 模拟一堆routes
+            changeContent(href);
+        });
+    }
+</script>
+
+</body>
+</html>
